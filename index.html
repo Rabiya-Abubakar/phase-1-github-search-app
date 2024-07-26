@@ -1,33 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'/>
-  <title>Document</title>
-  <script src='js/index.js'></script>
-  <link rel='stylesheet' href='index.css'/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Search</title>
+    <style>
+        /* Add any necessary styles here */
+    </style>
 </head>
 <body>
-  <div id='main'>
-
-    <h2>GitHub Search</h2>
-
-    <form id='github-form'>
-      <input id='search' type='text' name='search'>
-      <input type='submit' name='submit'/>
+    <h1>GitHub Search</h1>
+    <form id="search-form">
+        <select id="search-type">
+            <option value="users">Users</option>
+            <option value="repositories">Repositories</option>
+            <option value="code">Code</option>
+            <option value="commits">Commits</option>
+            <option value="issues">Issues</option>
+            <option value="labels">Labels</option>
+            <option value="topics">Topics</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Search GitHub...">
+        <button type="submit">Search</button>
     </form>
-
-    <div id='github-container'>
-      <ul id='user-list'>
-
-      </ul>
-
-      <ul id='repos-list'>
-
-      </ul>
-    </div>
-
-  </div>
-
+    <div id="search-results"></div>
+    <div id="repo-results"></div>
+    <script src="js/index.js"></script>
 </body>
 </html>
